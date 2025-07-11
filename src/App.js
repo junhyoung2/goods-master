@@ -14,7 +14,7 @@ import SearchPage from "./components/SearchPage";
 import ItemPage from "./components/ItemPage";
 import Msearch from "./components/Msearch";
 
-const App = () => {
+const App =() => {
   const [cart, setCart] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [likedItems, setLikedItems] = useState([]);
