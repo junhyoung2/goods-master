@@ -67,7 +67,7 @@ const MypageTD = ({setIsLoggedIn }) => {
                         <p className="title">CART</p>
                         <p className="sub">장바구니</p>
                     </div>
-                    <div className="box">
+                    <div className="box" onClick={() => navigate("/wishlist")}>
                         <p className="title">WISHLIST</p>
                         <p className="sub">관심 상품</p>
                     </div>
