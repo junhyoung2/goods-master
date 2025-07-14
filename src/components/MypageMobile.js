@@ -3,13 +3,13 @@ import { IoCartOutline } from "react-icons/io5";
 import { BsCoin } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
-const MypageMobile = ({setIsLoggedIn } ) => {
-     const navigate = useNavigate();
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-    navigate("/");
-    window.scrollTo(0, 0);
-  };
+const MypageMobile = ({ setIsLoggedIn }) => {
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+        navigate("/");
+        window.scrollTo(0, 0);
+    };
     return (
         <div className="mypagemobile-wrap">
             <div className="member-wrap">
@@ -22,8 +22,7 @@ const MypageMobile = ({setIsLoggedIn } ) => {
                     <p>쿠폰</p>
                     <p>0</p>
                 </div>
-                <div className="item-wrap"onClick={() => navigate("/cart")} >
-
+                <div className="item-wrap" onClick={() => navigate("/cart")}>
                     <IoCartOutline />
                     <p>장바구니</p>
                     <p>0</p>
@@ -36,14 +35,24 @@ const MypageMobile = ({setIsLoggedIn } ) => {
             </div>
             <div className="container">
                 <div className="box">
-                    <h4 className="title">ORDER<br/>TAKING</h4>
+                    <h4 className="title">
+                        ORDER
+                        <br />
+                        TAKING
+                    </h4>
                     <p className="sub-title">주문내역조회</p>
                 </div>
                 <div className="box">
                     <h4 className="title">PROFILE</h4>
                     <p className="sub-title">회원정보</p>
                 </div>
-                <div className="box">
+                <div
+                    className="box"
+                    onClick={() => {
+                        navigate("/wishlist");
+                        window.scrollTo(0, 0);
+                    }}
+                >
                     <h4 className="title">WISHLIST</h4>
                     <p className="sub-title">관심상품</p>
                 </div>
@@ -60,7 +69,9 @@ const MypageMobile = ({setIsLoggedIn } ) => {
                     <p className="sub-title">쿠폰</p>
                 </div>
             </div>
-            <button className="logout-btn" onClick={handleLogout}>로그아웃</button>
+            <button className="logout-btn" onClick={handleLogout}>
+                로그아웃
+            </button>
         </div>
     );
 };

@@ -1,10 +1,10 @@
 import { IoCartOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
-const MypageTD = ({setIsLoggedIn }) => {
+const MypageTD = ({ setIsLoggedIn }) => {
     const navigate = useNavigate();
     const handleLogout = () => {
-        setIsLoggedIn (false);
+        setIsLoggedIn(false);
         navigate("/");
         window.scrollTo(0, 0);
     };
@@ -63,11 +63,17 @@ const MypageTD = ({setIsLoggedIn }) => {
                         <p className="title">ORDER</p>
                         <p className="sub">주문내역 조회</p>
                     </div>
-                    <div className="box" onClick={() => navigate("/cart")} >
+                    <div className="box" onClick={() => navigate("/cart")}>
                         <p className="title">CART</p>
                         <p className="sub">장바구니</p>
                     </div>
-                    <div className="box" onClick={() => navigate("/wishlist")}>
+                    <div
+                        className="box"
+                        onClick={() => {
+                            navigate("/wishlist");
+                            window.scrollTo(0, 0);
+                        }}
+                    >
                         <p className="title">WISHLIST</p>
                         <p className="sub">관심 상품</p>
                     </div>

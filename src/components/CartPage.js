@@ -84,15 +84,15 @@ const CartPage = ({ cart, setCart, onCategorySelect }) => {
                     <img src={`${process.env.PUBLIC_URL}${item.image}`} alt={item.title} />
                   </div>
                   <div className="item-info">
-                    <div className="text-wrap">
-                      <p className="brand">Shop</p>
+                 <div className="text-wrap">
+                      <p className="brand">{item.brand}</p>
                     <p className="name">{item.name}</p>
-                    <p className="option">{item.brand}</p>
+                    <p className="option">{item.subtitle}</p>
                     </div>
                     <div className="quantity">
                       <button onClick={() => changeQuantity(item.id, -1)}>
                         -
-                      </button>
+                      </button>   
                       <span>{item.count}</span>
                       <button onClick={() => changeQuantity(item.id, 1)}>
                         +
